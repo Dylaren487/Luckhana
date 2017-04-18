@@ -1,0 +1,10 @@
+.student-name{
+	color: #FF0000;
+	font-size: x-large;
+}
+.grade{
+	font-weight: bold;
+}
+.featured{
+	background: linear-gradient(to bottom right, red, yellow);
+}
