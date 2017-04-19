@@ -2,90 +2,96 @@ import {Component} from "@angular/core";
 
 @Component({
   selector: 'F3Converter',
+  templateUrl: 'app/Feature3-DateToZodiac/feature3-converter.component.html',
+  styleUrls: ['app/Feature3-DateToZodiac/feature3-converter.component.css']
 })
 
 export class f3Converter {
   inputDate: string;
   output: string;
-  showOutput: boolean = false;
+  showOutput: boolean;
+
+  ngOnInit(){
+    this.showOutput = false;
+  }
 
   calculateZodiac() {
     if(this.inputDate==null){
       this.output = "Null date"
     }else{
-      let month : number = +this.inputDate.substring(5,7);
-      let day : number = +this.inputDate.substring(8);
+      let month : number = parseInt(this.inputDate.substring(5,7));
+      let day : number = parseInt(this.inputDate.substring(8));
       if(month==1){
         if(day>12){
-          this.output=="Capricorn";
+          this.output="Capricorn";
         }else{
-          this.output=="Sagittarius";
+          this.output="Sagittarius";
         }
       }else if(month==2){
         if(day>12){
-          this.output=="Aquarius";
+          this.output="Aquarius";
         }else{
-          this.output=="Capricorn";
+          this.output="Capricorn";
         }
       }else if(month==3){
         if(day>12){
-          this.output=="Pisces";
+          this.output="Pisces";
         }else{
-          this.output=="Aquarius";
+          this.output="Aquarius";
         }
       }else if(month==4){
         if(day>12){
-          this.output=="Aries";
+          this.output="Aries";
         }else{
-          this.output=="Pisces";
+          this.output="Pisces";
         }
       }else if(month==5){
         if(day>12){
-          this.output=="Taurus";
+          this.output="Taurus";
         }else{
-          this.output=="Aries";
+          this.output="Aries";
         }
       }else if(month==6){
         if(day>12){
-          this.output=="Gemini";
+          this.output="Gemini";
         }else{
-          this.output=="Taurus";
+          this.output="Taurus";
         }
       }else if(month==7){
         if(day>12){
-          this.output=="Cancer";
+          this.output="Cancer";
         }else{
-          this.output=="Gemini";
+          this.output="Gemini";
         }
       }else if(month==8){
         if(day>12){
-          this.output=="Leo";
+          this.output="Leo";
         }else{
-          this.output=="Cancer";
+          this.output="Cancer";
         }
       }else if(month==9){
         if(day>12){
-          this.output=="Virgo";
+          this.output="Virgo";
         }else{
-          this.output=="Leo";
+          this.output="Leo";
         }
       }else if(month==10){
         if(day>12){
-          this.output=="Libra";
+          this.output="Libra";
         }else{
-          this.output=="Virgo";
+          this.output="Virgo";
         }
       }else if(month==11){
         if(day>12){
-          this.output=="Scorpio";
+          this.output="Scorpio";
         }else{
-          this.output=="Libra";
+          this.output="Libra";
         }
       }else if(month==12){
         if(day>12){
-          this.output=="Sagittarius";
+          this.output="Sagittarius";
         }else{
-          this.output=="Scorpio";
+          this.output="Scorpio";
         }
       }
       this.showOutput = true;
