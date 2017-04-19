@@ -1,0 +1,33 @@
+package camt.swtraining.service;
+
+import camt.swtraining.entity.Picture;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.PostConstruct;
+import java.util.List;
+
+/**
+ * Created by Admin on 4/19/2017.
+ */
+@Service
+public class AppService {
+    List<Picture> pictures;
+
+    @PostConstruct
+    public void init() {
+        Picture picture = new Picture(1, "l1.jpg", "Lakhana stone", "I found this lakhana stone on sales on internet. The stone belongs to Wat pa nong lom.");
+        pictures.add(picture);
+    }
+
+    public void addToList(Picture picture) {
+        pictures.add(picture);
+    }
+
+    public Picture getPictureInfo(long id) {
+        return pictures.stream().filter(p -> p.getId() == id).findFirst().orElse(null);
+    }
+
+    public List<Picture> getPicturesList() {
+        return pictures;
+    }
+}
