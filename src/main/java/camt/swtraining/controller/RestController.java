@@ -7,6 +7,7 @@ import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 import org.glassfish.jersey.media.multipart.FormDataParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import javax.imageio.ImageIO;
@@ -49,9 +50,9 @@ public class RestController {
     }
 
     @GET
-    @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getPictureInfo(@PathParam("id")long id){
+    @Path("{id}")
+    public Response getPictureInfo(@PathParam("id") long id){
         if(appService.getPictureInfo(id)!=null){
             return Response.ok().entity(appService.getPictureInfo(id)).build();
         }

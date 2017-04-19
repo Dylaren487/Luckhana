@@ -5,8 +5,8 @@ import {ImageService} from "../../service/image-service";
 import 'rxjs/add/operator/switchMap';
 @Component({
   selector: 'F5Show',
-  templateUrl: 'feature5-show.component.html',
-  styleUrls: ['feature5-show.component.css']
+  templateUrl: 'app/Feature5-Upload/show/feature5-show.component.html',
+  styleUrls: ['app/Feature5-Upload/show/feature5-show.component.css']
 })
 
 export class f5Show{

@@ -10,7 +10,7 @@ public class Picture {
     long id;
     String image;
     String name;
-    String decription;
+    String description;
 
     public Picture() {
 
@@ -20,7 +20,7 @@ public class Picture {
         this.id = id;
         this.image = image;
         this.name = name;
-        this.decription = decription;
+        this.description = decription;
     }
 
     public long getId() {
@@ -35,8 +35,8 @@ public class Picture {
         return name;
     }
 
-    public String getDecription() {
-        return decription;
+    public String getDescription() {
+        return description;
     }
 
     public void setId(long id) {
@@ -51,7 +51,7 @@ public class Picture {
         this.name = name;
     }
 
-    public void setDecription(String decription) {
-        this.decription = decription;
+    public void setDescription(String decription) {
+        this.description = decription;
     }
 }

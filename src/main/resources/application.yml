@@ -1,3 +1,7 @@
+spring:
+  profiles:
+    active:
+      - local
 server:
   baseUrl: http://localhost:3000/
   imageUrl: images/

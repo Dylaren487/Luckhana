@@ -4,8 +4,8 @@ import {Router} from "@angular/router";
 import {Picture} from "../../entity/picture";
 @Component({
   selector: 'F5Upload',
-  templateUrl: 'feature5-upload.component.html',
-  styleUrls: ['feature5-upload.component.css']
+  templateUrl: 'app/Feature5-Upload/upload/feature5-upload.component.html',
+  styleUrls: ['app/Feature5-Upload/upload/feature5-upload.component.css']
 })
 
 export class f5Upload{
