@@ -1,0 +1,8 @@
+<form>
+  name<br>
+  <input type="text" name="name" [(ngModel)]="picture.name"><br>
+  description<br>
+  <input type="text" name="description" [(ngModel)]="picture.description"><br>
+  picture<br>
+  <input type="file" #ImageInput (change)="onFileChange($event,picture)"><br>
+</form>

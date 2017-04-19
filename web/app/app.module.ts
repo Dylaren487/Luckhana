@@ -1,14 +1,14 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './app.component';
-import {StudentsComponent} from './students/students.component';
-import {TimeComponent} from './time/time.component';
-import {Student} from './students/student';
+import {HttpModule} from "@angular/http";
+import {ImageService} from "./service/image-service";
+
 @NgModule({
- declarations: [ AppComponent,
-				StudentsComponent,
-				TimeComponent],
- imports: [BrowserModule],
- bootstrap: [AppComponent]
+  declarations: [AppComponent],
+  imports: [BrowserModule, HttpModule],
+  bootstrap: [AppComponent],
+  providers: [ImageService]
 })
-export class AppModule {}
+export class AppModule {
+}

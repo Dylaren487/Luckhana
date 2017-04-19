@@ -1,0 +1,8 @@
+<ul *ngFor="let picture of pictures">
+  <li class="row">
+    <div class="icon">
+      <img [src]="picture.image">
+    </div>
+    <h3>name : {{picture.name}}</h3>
+  </li>
+</ul>
