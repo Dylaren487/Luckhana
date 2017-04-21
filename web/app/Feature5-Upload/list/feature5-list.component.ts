@@ -1,6 +1,5 @@
 import {Component} from "@angular/core";
 import {Picture} from "../../entity/picture";
-import {ActivatedRoute, Params} from "@angular/router";
 import {ImageService} from "../../service/image-service";
 import 'rxjs/add/operator/switchMap';
 @Component({

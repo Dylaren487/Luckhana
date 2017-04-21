@@ -5,4 +5,5 @@
   <input type="text" name="description" [(ngModel)]="picture.description"><br>
   picture<br>
   <input type="file" #ImageInput (change)="onFileChange($event,picture)"><br>
+  <input type="submit" (click)="addImage(picture)">
 </form>

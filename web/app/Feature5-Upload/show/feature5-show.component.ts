@@ -11,10 +11,19 @@ import 'rxjs/add/operator/switchMap';
 
 export class f5Show{
   picture:Picture;
+  isNoData: boolean;
   constructor(private route: ActivatedRoute, private imageService:ImageService){}
   ngOnInit() {
+    this.isNoData = false;
+
     this.route.params
-      .switchMap((params:Params) => this.imageService.getImage(+params['id']))
-      .subscribe((picture:Picture) => this.picture = picture);
+      .switchMap((params: Params) => this.imageService.getImage(+params['id']))
+      .subscribe((picture: Picture) => {
+          if (picture !== null)
+            this.picture = picture;
+          else
+            this.isNoData = true;
+        }
+      );
   }
 }

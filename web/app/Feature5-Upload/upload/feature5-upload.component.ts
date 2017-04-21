@@ -16,14 +16,15 @@ export class f5Upload{
   }
 
   @ViewChild('ImageInput') inputEl:ElementRef;
-  addImage(){
+  addImage(picture:Picture){
     let result: Picture;
+    console.log(picture);
     let inputEl: HTMLInputElement = this.inputEl.nativeElement;
-    this.imageService.addImage(this.picture, inputEl.files.item(0))
+    this.imageService.addImage(picture, inputEl.files.item(0))
       .subscribe(resultPicture=>{
         result = resultPicture
         if(result != null){
-          this.router.navigate(['/f5list']);
+          this.router.navigate(['/f5List']);
         }else{
           alert("Error in uploading image")
         }

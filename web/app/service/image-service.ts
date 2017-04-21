@@ -26,10 +26,12 @@ export class ImageService{
           })
       })
   }
+
   getAllImage(){
     return this.http.get('http://localhost:8080/luckhana')
       .map((res) => res.json());
   }
+
   getImage(id:number){
     let picture: Picture;
     return this.http.get('http://localhost:8080/luckhana/' + id)

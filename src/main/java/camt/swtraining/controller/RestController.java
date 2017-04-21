@@ -56,7 +56,7 @@ public class RestController {
         if(appService.getPictureInfo(id)!=null){
             return Response.ok().entity(appService.getPictureInfo(id)).build();
         }
-        return Response.status(404).build();
+        return Response.noContent().build();
     }
 
     @GET
@@ -66,16 +66,18 @@ public class RestController {
     }
 
     @POST
+    @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response addToList(Picture picture){
+        picture.setImage(baseUrl+imageUrl+picture.getImage());
         appService.addToList(picture);
-        return Response.noContent().build();
+        return Response.ok().entity(picture).build();
     }
 
     @GET
     @Path("/images/{filename}")
     @Produces({"image/png", "image/jpg", "image/gif"})
-    public Response getStudentImage(@PathParam("filename") String filename) {
+    public Response getImage(@PathParam("filename") String filename) {
         File file = Paths.get(imageServerDir + filename).toFile();
         if (file.exists()) {
             Response.ResponseBuilder responseBuilder = Response.ok((Object) file);

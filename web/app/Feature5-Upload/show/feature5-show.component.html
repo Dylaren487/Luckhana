@@ -1,3 +1,7 @@
-<h3>{{picture?.name}}</h3><br>
-<img [src]="picture?.image"><br>
-<p>{{picture?.description}}</p>
+<div [hidden]="!isNoData">Nothing</div>
+
+<div [hidden]="isNoData">
+  <h3>{{picture?.name}}</h3><br>
+  <img [src]="picture?.image"><br>
+  <p>{{picture?.description}}</p>
+</div>
