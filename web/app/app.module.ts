@@ -13,12 +13,13 @@ import {f5List} from "./Feature5-Upload/list/feature5-list.component";
 import {f4Map} from "./Feature4-Map/feature4-map.component";
 import {FileNotFoundComponent} from "./filenotfound/file-not-found.component";
 import {AgmCoreModule} from "angular2-google-maps/core";
+import {MapService} from "./service/map.service";
 
 @NgModule({
   declarations: [AppComponent, f3Converter, f4Map, f5Upload, f5Show, f5List, FileNotFoundComponent],
   imports: [BrowserModule, HttpModule, FormsModule, appRouteModule, AgmCoreModule.forRoot({apiKey:'AIzaSyAvC8hCQ6AM9om3dLYczzFj9dFS7fojGj0'})],
   bootstrap: [AppComponent],
-  providers: [ImageService, {provide: LocationStrategy, useClass: HashLocationStrategy}]
+  providers: [ImageService,MapService, {provide: LocationStrategy, useClass: HashLocationStrategy}]
 })
 export class AppModule {
 }

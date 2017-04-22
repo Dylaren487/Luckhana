@@ -1,5 +1,6 @@
 package camt.swtraining.controller;
 
+import camt.swtraining.entity.Location;
 import camt.swtraining.entity.Picture;
 import camt.swtraining.service.AppService;
 import org.apache.commons.io.FilenameUtils;
@@ -70,7 +71,7 @@ public class RestController {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response addToList(Picture picture){
         picture.setImage(baseUrl+imageUrl+picture.getImage());
-        appService.addToList(picture);
+        appService.addPicture(picture);
         return Response.ok().entity(picture).build();
     }
 
@@ -100,5 +101,21 @@ public class RestController {
         File targetFile = Files.createFile(Paths.get(imageServerDir+newFilename)).toFile();
         ImageIO.write(img,ext,targetFile);
         return Response.ok(newFilename).build();
+    }
+
+    @GET
+    @Path("/Map")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getLocationsList(){
+        return Response.ok().entity(appService.getLocationsList()).build();
+    }
+
+    @POST
+    @Path("/Map")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response addLocation(Location location){
+        appService.addLocation(location);
+        return Response.ok().entity(location).build();
     }
 }

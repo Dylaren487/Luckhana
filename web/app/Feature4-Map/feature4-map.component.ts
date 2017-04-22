@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import {MapService} from "../service/map.service";
 
 @Component({
   selector: 'F4Map',
@@ -7,6 +8,12 @@ import {Component} from "@angular/core";
 })
 
 export class f4Map{
-  lat: number = 51.678418;
-  lng: number = 7.809007;
+  locations:Location[];
+  lat: number = 18.796143;
+  lng: number = 98.979263;
+  zoom: number = 14;
+  constructor(private mapService: MapService){}
+  ngOnInit(){
+    this.mapService.getAllLocation().subscribe((locations)=>this.locations=locations);
+  }
 }
