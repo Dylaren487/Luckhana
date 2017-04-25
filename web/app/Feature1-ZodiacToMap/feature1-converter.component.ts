@@ -2,8 +2,8 @@ import { Component } from "@angular/core";
 
 @Component({
   selector: 'F1Converter',
-  templateUrl: 'app/Feature1-MapToTable/feature1-converter.component.html',
-  styleUrls: ['app/Feature1-MapToTable/feature1-converter.component.css']
+  templateUrl: 'app/Feature1-ZodiacToMap/feature1-converter.component.html',
+  styleUrls: ['app/Feature1-ZodiacToMap/feature1-converter.component.css']
 })
 
 export class f1Converter {

@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import {NgModule} from '@angular/core';
-=======
 import { f2Converter } from './Feature2-TableToMap/feature2-converter.component';
-import { f1Converter } from './Feature1-MapToTable/feature1-converter.component';
-import {NgModule}              from '@angular/core';
->>>>>>> origin/master
 import {RouterModule, Routes}  from '@angular/router';
 import {f3Converter} from "./Feature3-DateToZodiac/feature3-converter.component";
 import {f5Upload} from "./Feature5-Upload/upload/feature5-upload.component";
