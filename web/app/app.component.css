@@ -1,29 +1,35 @@
-li.menu{
-  display:inline;
+li.menu {
+    display: inline;
 }
-ul.menu{
-  list-style-type:none;
-  overflow:hidden;
-  text-align:center;
+
+ul.menu {
+    list-style-type: none;
+    overflow: hidden;
+    text-align: center;
 }
-li.menu a{
-  display:inline-block;
-  color:white;
-  text-align:center;
-  padding:20px 30px;
-  text-decoration:none;
-  font-size: medium;
+
+li.menu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
+    font-size: medium;
 }
-li.menu a:hover{
-  background-color: #3291c4;
+
+li.menu a:hover {
+    background-color: #3291c4;
 }
-nav.menu{
-  background-color: #0077c4;
+
+nav.menu {
+    background-color: #0077c4;
 }
-.outlet{
-  padding-left: 40px;
-  padding-right: 40px;
+
+.outlet {
+    padding-left: 40px;
+    padding-right: 40px;
 }
-.banner{
-  background-color: white;
+
+.banner {
+    background-color: white;
 }
