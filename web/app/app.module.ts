@@ -14,9 +14,10 @@ import {f4Map} from "./Feature4-Map/feature4-map.component";
 import {FileNotFoundComponent} from "./filenotfound/file-not-found.component";
 import {AgmCoreModule} from "angular2-google-maps/core";
 import {MapService} from "./service/map.service";
+import {f1Converter} from "./Feature1-ZodiacToMap/feature1-converter.component";
 
 @NgModule({
-  declarations: [AppComponent, f3Converter, f4Map, f5Upload, f5Show, f5List, FileNotFoundComponent],
+  declarations: [AppComponent,f1Converter, f3Converter, f4Map, f5Upload, f5Show, f5List, FileNotFoundComponent],
   imports: [BrowserModule, HttpModule, FormsModule, appRouteModule, AgmCoreModule.forRoot({apiKey:'AIzaSyAvC8hCQ6AM9om3dLYczzFj9dFS7fojGj0'})],
   bootstrap: [AppComponent],
   providers: [ImageService,MapService, {provide: LocationStrategy, useClass: HashLocationStrategy}]
