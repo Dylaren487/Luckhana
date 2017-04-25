@@ -1,3 +1,5 @@
+import { f2Converter } from './Feature2-TableToMap/feature2-converter.component';
+import { f1Converter } from './Feature1-MapToTable/feature1-converter.component';
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './app.component';
@@ -16,7 +18,7 @@ import {AgmCoreModule} from "angular2-google-maps/core";
 import {MapService} from "./service/map.service";
 
 @NgModule({
-  declarations: [AppComponent, f3Converter, f4Map, f5Upload, f5Show, f5List, FileNotFoundComponent],
+  declarations: [AppComponent,f1Converter,f2Converter ,f3Converter, f4Map, f5Upload, f5Show, f5List, FileNotFoundComponent],
   imports: [BrowserModule, HttpModule, FormsModule, appRouteModule, AgmCoreModule.forRoot({apiKey:'AIzaSyAvC8hCQ6AM9om3dLYczzFj9dFS7fojGj0'})],
   bootstrap: [AppComponent],
   providers: [ImageService,MapService, {provide: LocationStrategy, useClass: HashLocationStrategy}]
