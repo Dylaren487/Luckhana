@@ -1,12 +1,12 @@
 import { Component } from "@angular/core";
 
 @Component({
-  selector: 'F1Converter',
-  templateUrl: 'app/Feature1-MapToTable/feature1-converter.component.html',
-  styleUrls: ['app/Feature1-MapToTable/feature1-converter.component.css']
+  selector: 'F2Converter',
+  templateUrl: 'app/Feature2-TableToMap/feature2-converter.component.html',
+  styleUrls: ['app/Feature2-TableToMap/feature2-converter.component.css']
 })
 
-export class f1Converter {
+export class f2Converter {
 
   ngOnInit() {
 
@@ -24,8 +24,8 @@ export class f1Converter {
   star10:String;
   star11:String;
   
-  mapping:boolean = true;
-  table:boolean = false;
+  mapping:boolean = false;
+  table:boolean = true;
 
   convertToTable(){
     this.mapping = false;

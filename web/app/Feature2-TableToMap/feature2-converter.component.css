@@ -1,0 +1,110 @@
+.aries {
+    position: absolute;
+    top: 24%;
+    left: 47.5%;
+    width: 5.6%;
+    height: 21%;
+}
+
+.pisces {
+    position: absolute;
+    top: 24%;
+    left: 55%;
+    width: 5%;
+    height: 12%;
+}
+
+.aquarius {
+    position: absolute;
+    top: 37%;
+    left: 58%;
+    width: 12%;
+    height: 7%;
+}
+
+.capricornus {
+    position: absolute;
+    top: 47%;
+    left: 56%;
+    width: 12%;
+    height: 7%;
+}
+
+.sagitarius {
+    position: absolute;
+    top: 56%;
+    left: 58%;
+    width: 10%;
+    height: 7%;
+}
+
+.scorpio {
+    position: absolute;
+    top: 62%;
+    left: 55%;
+    width: 5%;
+    height: 12%;
+}
+
+.libra {
+    position: absolute;
+    top: 56%;
+    left: 47.5%;
+    width: 5.6%;
+    height: 21%;
+}
+
+.virgo {
+    position: absolute;
+    top: 62%;
+    left: 40.5%;
+    width: 5%;
+    height: 12%;
+}
+
+.leo {
+    position: absolute;
+    top: 56%;
+    left: 31%;
+    width: 10%;
+    height: 7%;
+}
+
+.cancer {
+    position: absolute;
+    top: 47%;
+    left: 31%;
+    width: 12%;
+    height: 7%;
+}
+
+.germini {
+    position: absolute;
+    top: 37%;
+    left: 31%;
+    width: 12%;
+    height: 7%;
+}
+
+.taurus {
+    position: absolute;
+    top: 24%;
+    left: 40.5%;
+    width: 5%;
+    height: 12%;
+}
+
+.text-chart1 {
+    text-align: center;
+    color: black;
+}
+
+.text-chart2 {
+    text-align: left;
+    color: black;
+}
+
+.text-chart3 {
+    text-align: right;
+    color: black;
+}
