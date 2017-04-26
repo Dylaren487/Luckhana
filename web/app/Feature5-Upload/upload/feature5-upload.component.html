@@ -1,9 +1,18 @@
-<form>
-  name<br>
-  <input type="text" name="name" [(ngModel)]="picture.name"><br>
-  description<br>
-  <input type="text" name="description" [(ngModel)]="picture.description"><br>
-  picture<br>
-  <input type="file" #ImageInput (change)="onFileChange($event,picture)"><br>
-  <input type="submit" (click)="addImage(picture)">
+<form class="form-style-9 animated fadeInUp go">
+
+    <legend>Upload your photo here.</legend>
+    <ul>
+        <li>
+            <input type="text" class="field-style field-full align-none" name="name" [(ngModel)]="picture.name" placeholder="Name">
+        </li>
+        <li>
+            <input type="text" class="field-style field-full align-none" name="description" [(ngModel)]="picture.description" placeholder="Description">
+        </li>
+        <li>
+            <input type="file" class="field-style field-full align-none" #ImageInput (change)="onFileChange($event,picture)"><br>
+        </li>
+        <li>
+            <input type="submit" (click)="addImage(picture)" value="Upload" />
+        </li>
+    </ul>
 </form>

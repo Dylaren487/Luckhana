@@ -1,8 +1,22 @@
-<ul *ngFor="let picture of pictures">
-  <li class="row">
-    <div class="icon">
-      <img [src]="picture.image">
+<div>
+    <div class="animatedParent">
+        <div class="section-heading text-center">
+            <h2 class="h-bold animated bounceInDown go">
+                Luckhana Gallery
+            </h2>
+            <div class="divider-header">
+            </div>
+        </div>
     </div>
-    <h3>name : {{picture.name}}</h3>
-  </li>
-</ul>
+</div>
+
+<div>
+    <div class="col-md-2 form-style-9 animated fadeInUp go" *ngFor="let picture of pictures">
+        <ul>
+            <li>
+                <img [src]="picture.image" class="img-responsive" alt="img">
+                <legend>{{picture.name}}</legend>
+            </li>
+        </ul>
+    </div>
+</div>
