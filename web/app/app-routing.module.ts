@@ -19,6 +19,11 @@ const appRoute: Routes = [
   {path: 'f5Upload', component: f5Upload},
   {path: 'f5List', component: f5List},
   {path: 'f6', component: f6Contact},
+  {
+    path: '',
+    redirectTo: '/f1',
+    pathMatch: 'full'
+  },
   {path: '**', component: FileNotFoundComponent}
 ];
 

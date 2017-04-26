@@ -13,7 +13,7 @@
 <div>
     <div class="col-md-3 form-style-9 animated fadeInUp go" *ngFor="let picture of pictures">
         <ul>
-            <li>
+            <li (click)="showDetail(picture)">
                 <img [src]="picture.image" class="img-responsive" alt="img">
                 <legend>{{picture.name}}</legend>
             </li>
@@ -21,6 +21,6 @@
     </div>
 
     <div style="text-align: center; padding:40px;">
-        <input type="submit" class="btn btn-primary btn-lg" value="Upload your Lakhana" />
+        <input type="submit" class="btn btn-primary btn-lg" value="Upload your Lakhana" (click)="goToUpload()"/>
     </div>
 </div>

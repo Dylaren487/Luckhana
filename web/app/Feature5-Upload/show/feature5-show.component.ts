@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {Picture} from "../../entity/picture";
-import {ActivatedRoute, Params} from "@angular/router";
+import {ActivatedRoute, Params, Router} from "@angular/router";
 import {ImageService} from "../../service/image-service";
 import 'rxjs/add/operator/switchMap';
 @Component({
@@ -12,7 +12,7 @@ import 'rxjs/add/operator/switchMap';
 export class f5Show{
   picture:Picture;
   isNoData: boolean;
-  constructor(private route: ActivatedRoute, private imageService:ImageService){}
+  constructor(private route: ActivatedRoute, private imageService:ImageService, private router: Router){}
   ngOnInit() {
     this.isNoData = false;
 
@@ -25,5 +25,8 @@ export class f5Show{
             this.isNoData = true;
         }
       );
+  }
+  goBack(){
+    this.router.navigate(['/f5List']);
   }
 }
