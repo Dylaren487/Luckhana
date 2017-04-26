@@ -35,4 +35,7 @@ export class f5Upload{
     console.log(filename);
     product.image = filename;
   }
+  goBack(){
+    this.router.navigate(['/f5List']);
+  }
 }
