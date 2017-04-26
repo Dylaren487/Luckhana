@@ -1,3 +1,4 @@
+<div style="padding-left: 20%;padding-right: 20%">
 <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false">
   <sebm-google-map-marker
     *ngFor="let m of locations; let i = index"
@@ -5,8 +6,9 @@
     [longitude]="m.longitude"
     [markerDraggable]="false">
     <sebm-google-map-info-window>
-      <strong>{{m.description}}</strong>
+      <strong>{{m.name}}</strong><br>
+      <p>{{m.description}}</p>
     </sebm-google-map-info-window>
-
   </sebm-google-map-marker>
 </sebm-google-map>
+</div>
