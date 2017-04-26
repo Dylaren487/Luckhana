@@ -1,0 +1,116 @@
+<div class="w3-content w3-container w3-padding-64" id="contact">
+    <div>
+        <div class="animatedParent">
+            <div class="section-heading text-center">
+                <h2 class="h-bold animated bounceInDown go">
+                    Contact Us!
+                </h2>
+                <div class="divider-header">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="w3-row w3-padding-32 w3-section">
+        <div class="w3-col m4 w3-container" style="float:left">
+            <!-- Add Google Maps -->
+            <div style="margin:20px">
+                <sebm-google-map style="height:400px; width:350px" [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false">
+                    <sebm-google-map-marker *ngFor="let m of locations; let i = index" [latitude]="m.latitude" [longitude]="m.longitude" [markerDraggable]="false">
+                        <sebm-google-map-info-window>
+                            <strong>{{m.name}}</strong><br>
+                            <p>{{m.description}}</p>
+                        </sebm-google-map-info-window>
+                    </sebm-google-map-marker>
+                </sebm-google-map>
+            </div>
+        </div>
+        <div class="w3-col m8 w3-panel col-md-6">
+            <div class="w3-large w3-margin-bottom" style="margin-top: 80px; margin-left: 80px;">
+                <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chiang Mai University, Thailand<br>
+                <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 053-941300<br>
+                <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: prcmu239@gmail.com<br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="home-section color-dark bg-gray" id="service">
+    <div class="container marginbot-50">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div>
+                    <div class="section-heading text-center">
+                        <h2 class="h-bold">
+                            Our Places
+                        </h2>
+                        <div class="divider-header">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <div class="container">
+            <div class="row animatedParent">
+                <div class="col-xs-6 col-sm-4 col-md-4">
+                    <div class="animated rotateInDownLeft go">
+                        <div class="service-box">
+                            <div class="service-icon">
+                                <h3>Saladhamma</h3>
+                            </div>
+                            <div class="service-desc">
+                                <div style="padding: 10px;">
+                                    <img src="../../images/saladhamma.jpg" class="img-responsive center-block" alt="Responsive image">
+                                </div>
+                                <div class="divider-header">
+                                </div>
+                                <p>
+                                    Saladhamma is another most memorable and respected place in CMU which inside is the located the Buddha statue for CMU.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-4">
+                    <div class="animated rotateInDownLeft slow go">
+                        <div class="service-box">
+                            <h3>AngKaew</h3>
+                            <div class="service-desc">
+                                <div style="padding: 10px;">
+                                    <img src="../../images/angkaew.jpg" class="img-responsive center-block" alt="Responsive image">
+                                </div>
+                                <div class="divider-header">
+                                </div>
+                                <p>
+                                    AngKeaw is currently the only lake to store the water to supply Chiangmai University. It is located near the front gate of the university. Not only store the water to supply the university but Angkeaw lake is also one of the most memorable spot in Chiangmai
+                                    university due to it magnificent view of Suthep mountain.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-4">
+                    <div class="animated rotateInDownLeft slower go">
+                        <div class="service-box">
+                            <h3>CMU Cock Tower</h3>
+                            <div class="service-desc">
+                                <div style="padding: 10px;">
+                                    <img src="../../images/clock-tower.jpg" class="img-responsive center-block" alt="Responsive image">
+                                </div>
+                                <div class="divider-header">
+                                </div>
+                                <p>
+                                    The CMU clock tower is considered to be an important historical landmark of Chiang Mai university. It located in the middle of a street roundabout in front of engineering faculty. With the astounding view of Suthep mountain with Pra tat doi Suthep on
+                                    visual makes it one of the most beautiful landmarks of CMU.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

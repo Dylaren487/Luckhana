@@ -1,7 +1,14 @@
 <div [hidden]="!isNoData">Nothing</div>
 
 <div [hidden]="isNoData">
-  <h3>{{picture?.name}}</h3><br>
-  <img [src]="picture?.image"><br>
-  <p>{{picture?.description}}</p>
+    <div class="w3-row-padding">
+        <div class="w3-col l6 m7" style="padding-bottom:20px;">
+            <img [src]="picture?.image" class="img-responsive center-block"><br>
+        </div>
+        <div class="w3-col l6 m5">
+            <h3>{{picture?.name}}</h3>
+            <h6>{{picture?.description}}</h6>
+            <button class="btn btn-warning btn-lg">Back</button>
+        </div>
+    </div>
 </div>

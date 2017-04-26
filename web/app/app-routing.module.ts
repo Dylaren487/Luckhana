@@ -1,3 +1,4 @@
+import { f6Contact } from './Feature6-Contact/feature6-contact.component';
 import {NgModule} from '@angular/core';
 import { f2Converter } from './Feature2-TableToMap/feature2-converter.component';
 import {RouterModule, Routes}  from '@angular/router';
@@ -17,7 +18,7 @@ const appRoute: Routes = [
   {path: 'f4', component: f4Map},
   {path: 'f5Upload', component: f5Upload},
   {path: 'f5List', component: f5List},
-  {path: 'f1', component: f1Converter},
+  {path: 'f6', component: f6Contact},
   {path: '**', component: FileNotFoundComponent}
 ];
 

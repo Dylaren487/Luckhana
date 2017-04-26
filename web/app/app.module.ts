@@ -1,3 +1,4 @@
+import { f6Contact } from './Feature6-Contact/feature6-contact.component';
 import { f2Converter } from './Feature2-TableToMap/feature2-converter.component';
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
@@ -19,7 +20,17 @@ import {f1Converter} from "./Feature1-ZodiacToMap/feature1-converter.component";
 
 @NgModule({
 
-  declarations: [AppComponent,f1Converter,f2Converter ,f3Converter, f4Map, f5Upload, f5Show, f5List, FileNotFoundComponent],
+  declarations: [
+    AppComponent,
+    f1Converter,
+    f2Converter ,
+    f3Converter, 
+    f4Map, 
+    f5Upload, 
+    f5Show, 
+    f5List,
+    f6Contact, 
+    FileNotFoundComponent],
 
   imports: [BrowserModule, HttpModule, FormsModule, appRouteModule, AgmCoreModule.forRoot({apiKey:'AIzaSyAvC8hCQ6AM9om3dLYczzFj9dFS7fojGj0'})],
   bootstrap: [AppComponent],
