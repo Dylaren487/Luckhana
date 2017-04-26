@@ -6,6 +6,8 @@ import {Component} from "@angular/core";
 })
 
 export class InfoComponent{
+  lat : number = 18.808287;
+  log : number = 98.954676;
   cmuOfficeAddress : string = "Chiang Mai University, 239 Huay Kaew Road, Muang District, Chiang Mai, Thailand, 50200";
   cmuOfficePhone: string = "+66 53 941000";
   cmuOfficeFax: string = "+66 53 217143, 943002";
