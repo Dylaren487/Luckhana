@@ -97,4 +97,8 @@ export class f3Converter {
       this.showOutput = true;
     }
   }
+
+  goBack(){
+      this.showOutput = false;
+  }
 }

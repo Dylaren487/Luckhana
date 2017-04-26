@@ -3,7 +3,9 @@ import { Component } from "@angular/core";
 @Component({
   selector: 'F2Converter',
   templateUrl: 'app/Feature2-TableToMap/feature2-converter.component.html',
-  styleUrls: ['app/Feature2-TableToMap/feature2-converter.component.css']
+  styleUrls: [
+    'app/Feature2-TableToMap/feature2-converter.component.css',
+    'app/Feature2-TableToMap/feature2-converter-form.component.css']
 })
 
 export class f2Converter {

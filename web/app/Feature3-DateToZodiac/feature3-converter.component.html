@@ -1,3 +1,24 @@
-<input type="date" name="inputDate" [(ngModel)]="inputDate">
-<button (click)="calculateZodiac()">Calculate</button>
-<p>{{output}}</p>
+<form class="form-style-9 animated fadeInUp go" *ngIf="!showOutput">
+    <legend>Input your birthday.</legend>
+    <ul>
+        <li>
+            <input type="date" name="inputDate" class="field-style field-full align-none" [(ngModel)]="inputDate">
+        </li>
+        <li>
+            <input type="submit" (click)="calculateZodiac()" value="Calculate" />
+        </li>
+    </ul>
+</form>
+
+
+<form class="form-style-9 animated fadeInUp go" *ngIf="showOutput">
+    <legend>Your Zodiac is ...</legend>
+    <ul>
+        <li>
+            <h2>{{output}}</h2>
+        </li>
+        <li>
+            <input type="submit" (click)="goBack()" value="Back" />
+        </li>
+    </ul>
+</form>
