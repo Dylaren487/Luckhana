@@ -9,11 +9,11 @@ import {Router} from "@angular/router";
 })
 
 export class f6Contact{
- 
+
   locations:Location[];
-  lat: number = 18.796143;
-  lng: number = 98.979263;
-  zoom: number = 14;
+  lat: number = 18.808287;
+  lng: number = 98.954676;
+  zoom: number = 16;
   constructor(private mapService: MapService){}
   ngOnInit(){
     this.mapService.getAllLocation().subscribe((locations)=>this.locations=locations);
